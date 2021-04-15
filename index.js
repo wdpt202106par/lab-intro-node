@@ -17,9 +17,22 @@ class SortedList {
     return this.items[pos]
   }
 
-  max() {}
+  max() {
 
-  min() {}
+    return Math.max(...this.items)
+
+    // if (this.items === 0){
+    //   throw new Error('EmptySortedList');
+    // }
+  }
+
+  min() {
+    // if (items === 0){
+    //   throw new Error('EmptySortedList');
+    // }
+
+    return Math.min(...this.items)
+  }
 
   sum() {}
 
