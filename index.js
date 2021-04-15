@@ -38,15 +38,15 @@ class SortedList {
     if (this.length===0){
       return 0;
     } else {
-      this.items.reduce((acc,currentVal)=>acc+currentVal,0)
+      return this.items.reduce((acc,currentVal)=>acc+currentVal,0);
     }
   }
 
   avg() {
     if (this.length===0){
-      return 0;
+      throw new Error("EmptySortedList");
     } else {
-      this.sum()/this.length;
+     return this.sum()/this.length;
     }
   }
 }
