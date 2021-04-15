@@ -18,25 +18,38 @@ class SortedList {
   }
 
   max() {
-
+    if (this.length == 0){
+      throw new Error('EmptySortedList');
+    }
     return Math.max(...this.items)
 
-    // if (this.items === 0){
-    //   throw new Error('EmptySortedList');
-    // }
   }
 
   min() {
-    // if (items === 0){
-    //   throw new Error('EmptySortedList');
-    // }
-
+    if (this.length == 0){
+      throw new Error('EmptySortedList');
+    }
     return Math.min(...this.items)
   }
 
-  sum() {}
+  sum() {
+    let res = 0
+    for (let i = 0; i < this.length; i++) {
+      res += this.items[i]
+    }
+    return res
+  }
 
-  avg() {}
+  avg() {
+    if (this.length == 0){
+      throw new Error('EmptySortedList');
+    }
+    let res = 0
+    for (let i = 0; i < this.length; i++) {
+      res += this.items[i]
+    }
+    return res / this.length
+  }
 }
 
 module.exports = SortedList;
